@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  decorator-go-run:
+    container_name: decorator-go-run
+    build: .
+    command: go run main.go
+    volumes:
+      - ./:/go/src/app
+    working_dir: /go/src/app
